@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riyadh Touhid</title>
+  <link rel="icon" type="image/jpg" href="img/riyadh.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<header class="fixed top-0 left-0 w-full z-[50] bg-transparent backdrop-blur-lg">
+  <nav>
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl text-sm lg:text-md">Riyadh Touhid</a>
+      </div>
+      <div class="flex-none">
+        <div class="dropdown dropdown-end lg:hidden md:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+            <div class="w-10 rounded-full">
+              <img alt="Riyadh's Image" src="img/riyadh.jpg" />
+            </div>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li><a href="">Projects</a></li>
+            <li><a>Resume</a></li>
+            <li><a>Contact</a></li>
+            <li><button id="darkModeToggle">Dark Mode</button></li>
+          </ul>
+        </div>
+        <div class="hidden md:flex mr-5 text-sm">
+          <ul class="flex gap-8 item-center">
+            <li><a href="">Projects</a></li>
+            <li><a>Resume</a></li>
+            <li><a>Contact</a></li>
+            <li><button id="darkModeToggle">Dark Mode</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body class="h-screen bg-gray-50 bg-grid-light transition-colors duration-300" id="body">
+  <main class="pt-20">
+    <section class="container mx-auto px-4 py-10">
+      <img src="img/riyadh.jpg" alt="Riyadh's Image" class="w-40 h-40 rounded-full mx-auto mb-4">
+      <h2 class="text-2xl font-bold text-center mb-4">Hi Everyone</h2>
+      <p class="text-center mb-6">I am proficient in the following programming languages and always eager to explore new ones: 🚀</p>
+    </section>
+
+    <section class="container mx-auto px-4 py-10">
+      <h2 class="text-2xl font-bold text-center mb-4">Programming Languages</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <img src="img/go.svg" alt="Go" class="w-12 h-12">
+        <img src="img/dart.svg" alt="Dart" class="w-12 h-12">
+        <img src="img/typescript.svg" alt="TypeScript" class="w-12 h-12">
+        <img src="img/java.svg" alt="Java" class="w-12 h-12">
+        <img src="img/bash.svg" alt="Bash" class="w-12 h-12">
+        <img src="img/lua.svg" alt="Lua" class="w-12 h-12">
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-10">
+      <h2 class="text-2xl font-bold text-center mb-4">Frameworks</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <img src="img/fiber.svg" alt="Fiber" class="w-12 h-12">
+        <img src="img/nestjs.svg" alt="NestJS" class="w-12 h-12">
+        <img src="img/hono.svg" alt="Hono.js" class="w-12 h-12">
+        <img src="img/elysia.svg" alt="Elysia.js" class="w-12 h-12">
+        <img src="img/flutter.svg" alt="Flutter" class="w-12 h-12">
+        <img src="img/nextjs.svg" alt="Next.js" class="w-12 h-12">
+        <img src="img/remix.svg" alt="Remix.run" class="w-12 h-12">
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
