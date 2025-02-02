@@ -33,3 +33,32 @@
 .msizep{
   max-width: 700px;
 }
+
+.image-container {
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+}
+
+.message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.image-container img:hover {
+  filter: blur(5px);
+  transform: scale(1.05);
+  border: 4px solid #ccc;
+}
+
+.image-container img:hover + .message {
+  display: block;
+}
