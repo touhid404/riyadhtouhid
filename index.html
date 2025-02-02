@@ -17,6 +17,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <script src="https://kit.fontawesome.com/873c85c170.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="Css/style.css" />
     <script>
@@ -33,7 +34,7 @@
         }
       }
     </script>
-    
+      
 
   </head>
 
@@ -63,15 +64,27 @@
               <li><a href="">Projects</a></li>
               <li><a>Resume</a></li>
               <li><a>Blogs</a></li>
-              <li><button id="darkModeToggle">Dark Mode</button></li>
+              <!-- <li><button id="darkModeToggle">Dark Mode</button></li> -->
+              <li>
+                <button id="darkModeToggle" class="transition-all duration-300">
+                  <i id="darkModeIcon" class="fas fa-moon text-md"></i>
+                </button>
+              </li>
+              
             </ul>
           </div>
           <div class="hidden md:flex mr-5 text-sm">
             <ul class="flex gap-8 item-center">
-              <li><a href="">Projects</a></li>
-              <li><a>Resume</a></li>
-              <li><a>Blogs</a></li>
-              <li><button id="darkModeToggle">Dark Mode</button></li>
+              <li class="flex items-center"><a href="">Projects</a></li>
+              <li class="flex items-center"><a>Resume</a></li>
+              <li class="flex items-center"><a>Blogs</a></li>
+              <!-- <li><button id="darkModeToggle">Dark Mode</button></li> -->
+              <li class="flex items-center">
+                <button id="darkModeToggle" class="transition-all duration-300">
+                  <i id="darkModeIcon" class="fas fa-moon text-md"></i>
+                </button>
+              </li>
+              
             </ul>
           </div>
         </div>
@@ -96,11 +109,33 @@
            web developer and a proud Computer Science student at United International University. I love turning ideas into interactive websites that are both easy to use and visually appealing. Whether it’s building a sleek design or making sure everything works smoothly behind the scenes, I’m always up for a challenge. Thanks for checking out my portfolio—I’m excited to show you what I’ve been working on!</p>
 
         <a href="mailto:touhid435r@gmail.com" class="flex items-center justify-center mx-auto w-[200px] sm:w-[220px] px-5 py-2 border border-gray-300   rounded-full shadow-md hover:shadow-lg transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 ">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8 4.03-8 9-8 9 3.582 9 8z" />
-          </svg>
+         <img class="w-6 h-6 hidden md:block lg:block" src="pl/icons8-gmail-logo.svg" alt="">
           <span class="text-sm ml-2 font-semibold">touhid435r@gmail.com</span>
+        
       </a>
+      <div class="flex flex-wrap mx-auto my-5  gap-3 lg:gap-5 justify-center">
+        <a href="https://github.com/Riyadh435" class=" hover:text-black">
+            <i class="fab fa-github text-3xl"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/riyadh-touhid" class="text-blue-600 hover:text-blue-800">
+            <i class="fab fa-linkedin text-3xl"></i>
+        </a>
+        <a href="https://www.youtube.com/@riyadhtouhid" class="text-red-600 hover:text-red-800">
+            <i class="fab fa-youtube text-3xl"></i>
+        </a>
+        <a href="https://discord.com/users/938492174071369749
+        " class="text-indigo-600 hover:text-indigo-800">
+            <i class="fab fa-discord text-3xl"></i>
+        </a>
+      
+        <a href="https://www.facebook.com/riyadhwhy?mibextid=ZbWKwL" class="text-blue-700 hover:text-blue-900">
+            <i class="fab fa-facebook text-3xl"></i>
+        </a>
+        <a href="https://www.instagram.com/riyadh_touhid?igsh=MWd0MzQ5bWdubzM3aA==" class="text-pink-500 hover:text-pink-700">
+            <i class="fab fa-instagram text-3xl"></i>
+        </a>
+    </div>
+    
       
       
       </section>
@@ -149,5 +184,6 @@
     </main>
 
     <script src="js/script.js" defer></script>
+    
   </body>
 </html>
