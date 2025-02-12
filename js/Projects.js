@@ -1,7 +1,11 @@
 import projects from './ProjectsData.js'; // Import project data
 
 const projectContainer = document.getElementById("project-container");
-
+function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', options); // Format like 'Feb 10, 2025'
+}
 // Function to generate project cards
 function displayProjects() {
     projects.forEach((project, index) => {
@@ -10,10 +14,11 @@ function displayProjects() {
 
         projectCard.innerHTML = `
             <h3 class="project-title">${project.title}</h3>
+             <span class="project-date">${formatDate(project.date)}</span>
             <button class="view-more-btn" data-index="${index}">View More</button>
             <div class="details hidden">
                 <p>${project.description}</p>
-                <a href="${project.github}" target="_blank">GitHub Repo</a>
+                <a href="${project.github}" target="_blank">Github repo.</a>
                 <img src="${project.image}" alt="${project.title}">
             </div>
         `;
