@@ -24,6 +24,7 @@
 
 
 .bg-dark {
+  
 
 }
 
@@ -62,3 +63,72 @@
 .image-container img:hover + .message {
   display: block;
 }
+
+
+
+
+.project-card {
+  
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+/* View More button styling */
+.view-more-btn {
+  background-color: transparent;
+
+  padding: 8px 15px;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  text-decoration: underline;
+ 
+}
+
+/* Styling the details section */
+.details {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Styling the GitHub link */
+.details a {
+  font-size: 1rem;
+  color: #3182ce;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.details a:hover {
+  color: #63b3ed;
+}
+
+/* Image styling */
+.details img {
+  border-radius: 8px;
+  margin-top: 20px;
+  max-width: 100%;
+  display: block;
+} 

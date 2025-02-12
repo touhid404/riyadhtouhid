@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Riyadh Touhid</title>
+    <script type="module" defer src="js/Projects.js"></script>
     <link rel="icon" type="image/jpg" href="img/riyadh.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,7 +62,7 @@
               tabindex="0"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <li><a href="">Projects</a></li>
+              <li><a href="#projects">Projects</a></li>
               <li><a>Resume</a></li>
               <li><a>Blogs</a></li>
               <!-- <li><button id="darkModeToggle">Dark Mode</button></li> -->
@@ -75,7 +76,7 @@
           </div>
           <div class="hidden md:flex mr-5 text-sm">
             <ul class="flex gap-8 item-center">
-              <li class="flex items-center"><a href="">Projects</a></li>
+              <li class="flex items-center"><a href="#projects">Projects</a></li>
               <li class="flex items-center"><a>Resume</a></li>
               <li class="flex items-center"><a>Blogs</a></li>
               <!-- <li><button id="darkModeToggle">Dark Mode</button></li> -->
@@ -106,14 +107,13 @@
               alt="Riyadh's Image"
               class="w-40 h-40 rounded-full mx-auto mb-4 transition-all duration-500 ease-in-out transform hover:blur-md hover:scale-105 hover:border-4 hover:border-gray-400"
             />
-            <div class="message hidden">Thank you!</div>
+            <!-- <div class="message hidden">Thank you!</div> -->
           </div>
         </div>
       
       
         <h2 class="text-2xl font-bold text-center mb-4">Hi, Everyone</h2>
-        <p class="msizep mx-3 lg:mx-auto  text-justify my-5 text-sm ">Hello! I’m Touhidul Islam Riyadh, a
-           web developer and a proud Computer Science student at United International University. I love turning ideas into interactive websites that are both easy to use and visually appealing. Whether it’s building a sleek design or making sure everything works smoothly behind the scenes, I’m always up for a challenge. Thanks for checking out my portfolio—I’m excited to show you what I’ve been working on!</p>
+        <p class="msizep mx-3 lg:mx-auto  text-justify my-5 text-sm ">Hello! I’m Touhidul Islam Riyadh, a Computer Science student at United International University. I love turning ideas into interactive websites that are both easy to use and visually appealing. Whether it’s building a sleek design or making sure everything works smoothly behind the scenes, I’m always up for a challenge. Thanks for checking out my portfolio—I’m excited to show you what I’ve been working on!</p>
 
         <a href="mailto:touhid435r@gmail.com" class="flex items-center justify-center mx-auto w-[200px] sm:w-[220px] px-5 py-2 border border-gray-300   rounded-full shadow-md hover:shadow-lg transition-all duration-300">
          <img class="w-6 h-6 hidden md:block lg:block" src="pl/icons8-gmail-logo.svg" alt="">
@@ -188,6 +188,16 @@
           
         </div>
       </section>
+
+
+      <!-- Section Project -->
+      <section id="projects" class=" py:10 lg:py-20">
+        <h2 class="text-2xl font-bold text-center mb-6">My Recent Projects</h2>
+        <div id="project-container" class="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4"></div>
+    </section>
+    
+   
+    
     </main>
 
     <script src="js/script.js" defer></script>
