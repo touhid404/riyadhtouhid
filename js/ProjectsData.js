@@ -17,7 +17,7 @@ const projects = [
         title: "Bullet Quiz",
         description: "A seat booking system for university transport management.",
         github: "https://github.com/yourusername/transport-booking",
-        image: "projectsPicture/p1.jpg",
+        image: "projectsPicture/quiz.png",
         date: "2024-12-12"
     },
     {
