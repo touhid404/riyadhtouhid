@@ -23,7 +23,7 @@ function displayProjects(limit) {
             <button class="view-more-btn" data-index="${index}">View More</button>
             <div class="details hidden">
                 <p>${project.description}</p>
-                <a href="${project.github}" target="_blank">Github repo.</a>
+                <a href="${project.github}" target="_blank">Github repo. link</a>
                 <img src="${project.image}" alt="${project.title}">
             </div>
         `;
