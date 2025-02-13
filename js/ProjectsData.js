@@ -15,17 +15,17 @@ const projects = [
     },
     {
         title: "Bullet Quiz",
-        description: "A seat booking system for university transport management.",
-        github: "https://github.com/yourusername/transport-booking",
+        description: "Multiple-choice questions. Display of the current question number and total questions. Shows the final score after completing the quiz. Simple, user-friendly interface.",
+        github: "https://github.com/Riyadh435/quiz",
         image: "projectsPicture/quiz.png",
         date: "2024-12-12"
     },
     {
         title: "Tic-Tac-Toe Game",
-        description: "A simple Tic-Tac-Toe game made with JavaScript.",
-        github: "https://github.com/yourusername/tic-tac-toe",
-        image: "projectsPicture/p1.jpg",
-        date: "2025-12-12"
+        description: "A classic Tic-Tac-Toe game built using HTML, CSS, and JavaScript. This game allows two players to play in a simple and interactive environment. Players take turns marking their spots on a 3x3 grid with either an X or O. The first player to get three of their marks in a row, column, or diagonal wins the game.",
+        github: "https://github.com/Riyadh435/Tic-Tac-Game",
+        image: "projectsPicture/tic.png",
+        date: "2024-11-12"
     },
     {
         title: "University Transport Booking",

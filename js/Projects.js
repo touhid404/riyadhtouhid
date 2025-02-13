@@ -4,6 +4,7 @@ const projectContainer = document.getElementById("project-container");
 const loadMoreBtn = document.getElementById("load-more-btn");
 const initialDisplayCount = 4;
 let displayedCount = initialDisplayCount;
+let isAllProjectsVisible = false; // Flag to track whether all projects are visible
 
 function formatDate(dateString) {
     const options = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -40,14 +41,23 @@ function displayProjects(limit) {
     });
 }
 
+// Function to toggle the "Find More Projects" button
+function toggleLoadMoreButton() {
+    if (isAllProjectsVisible) {
+        loadMoreBtn.textContent = "Find More Projects";
+        displayedCount = initialDisplayCount;
+    } else {
+        loadMoreBtn.textContent = "Collapse Projects";
+        displayedCount = projects.length;
+    }
+    isAllProjectsVisible = !isAllProjectsVisible;
+    displayProjects(displayedCount);
+}
+
 // Initial display
 displayProjects(displayedCount);
 
 if (projects.length > initialDisplayCount) {
     loadMoreBtn.style.display = 'block';
-    loadMoreBtn.addEventListener('click', function () {
-        displayedCount = projects.length;
-        displayProjects(displayedCount);
-        loadMoreBtn.style.display = 'none'; // Hide button after loading all projects
-    });
+    loadMoreBtn.addEventListener('click', toggleLoadMoreButton);
 }

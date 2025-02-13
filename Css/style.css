@@ -24,10 +24,10 @@
 }
 
 
-.bg-dark {
+/* .bg-dark {
   
 
-}
+} */
 
 .dark-mode-text {
   color: white;
@@ -69,6 +69,10 @@
 
 
 .project-card {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+ 
+
+
   
   padding: 20px;
   border-radius: 8px;
