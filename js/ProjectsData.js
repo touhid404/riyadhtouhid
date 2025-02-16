@@ -1,5 +1,12 @@
 const projects = [
     {
+        title: "CGPA Calculator",
+        description: "A simple CGPA calculator using HTML, CSS, and JavaScript, allowing users to input grades, customize grading charts, and calculate CGPA, including retakes.",
+        github: "https://riyadh435.github.io/CGPA-calculator/",
+        image: "projectsPicture/cal.jpg",
+        date: "2025-02-15"
+    },
+    {
         title: "UIU Chatbot Nexa",
         description: "This is a simple chatbot that answers questions related to United International University (UIU). It uses predefined Q&A pairs and can learn new answers from users.",
         github: "https://github.com/Riyadh435/UIU-chatbot",
@@ -26,18 +33,6 @@ const projects = [
         github: "https://github.com/Riyadh435/Tic-Tac-Game",
         image: "projectsPicture/tic.png",
         date: "2024-11-12"
-    },
-    {
-        title: "University Transport Booking",
-        description: "A seat booking system for university transport management.",
-        github: "https://github.com/yourusername/transport-booking",
-        image: "transport-booking.jpg"
-    },
-    {
-        title: "University Transport Booking",
-        description: "A seat booking system for university transport management.",
-        github: "https://github.com/yourusername/transport-booking",
-        image: "transport-booking.jpg"
     }
 ];
 
