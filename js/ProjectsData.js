@@ -17,7 +17,7 @@ const projects = [
         title: "Academic Services And Voting System",
         description: "Our project, Academic Services and Voting System, is designed to provide students with essential academic resources and campus-related services. The platform enables students to access previous exam questions and solutions, participate in voting events, book transport seats, engage in one-to-one messaging, and view their exam routines .This project was developed as part of our Database Management Systems (DBMS) course at our university, showcasing our skills in database design and implementation.",
         github: "https://github.com/Riyadh435/Academic-services-and-voting-system",
-        image: "projectsPicture/p1.jpg",
+        image: "projectsPicture/asvs.png",
         date: "2025-01-27"
     },
     {
