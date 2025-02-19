@@ -3,7 +3,7 @@ const projects = [
         title: "CGPA Calculator",
         description: "A simple CGPA calculator using HTML, CSS, and JavaScript, allowing users to input grades, customize grading charts, and calculate CGPA, including retakes.",
         github: "https://riyadh435.github.io/CGPA-calculator/",
-        image: "projectsPicture/cal.jpg",
+        image: "projectsPicture/cgpacal.png",
         date: "2025-02-15"
     },
     {
