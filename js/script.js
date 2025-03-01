@@ -7,12 +7,7 @@ const colors = [
   { bg: "#F4F7FF", text: "#374151" }, // Default (unchanged)
 ];
 
-// const colors = [
-//   { bg: "#FEF3C7", text: "#000000" }, // Even Lighter Retro Yellow
-//   { bg: "#FECACA", text: "#000000" }, // Even Lighter Retro Red
-//   { bg: "#DDD6FE", text: "#000000" }, // Even Lighter Retro Purple
-//   { bg: "#F4F7FF", text: "#374151" }, // Default (unchanged)
-// ];
+
 
 
 let index = 0; // Start from the first color
