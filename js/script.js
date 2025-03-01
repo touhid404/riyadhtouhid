@@ -1,47 +1,44 @@
 const colors = [
-    { bg: "#FAEBD7", text: "#000000" }, // AntiqueWhite with black text
-    { bg: "#001F3F", text: "#FFFFFF" }, // Dark blue with white text
-    { bg: "#000000", text: "#FFFFFF" }, // Black with white text
-    { bg: "#F4F7FF", text: "#000000" }, // Light bluish with black text
-    { bg: "lightgreen", text: "#000000" }, // Light green with black text
-    { bg: "lightblue", text: "#000000" }, // Light blue with black text
-    { bg: "lightcoral", text: "#000000" }, // Light coral with black text
-    { bg: "#E84393", text: "#FFFFFF" }, // Valentine pink with white text
-    { bg: "#FBBF24", text: "#000000" }, // Retro yellow (DaisyUI-like)
-    { bg: "#F87171", text: "#000000" }, // Retro red
-    { bg: "#A78BFA", text: "#FFFFFF" }, // Retro purple
-    { bg: "#34D399", text: "#000000" } // Retro green
-  ];
-  
-  let index = 0;
-  let lastIndex = -1; 
-  let rotation = 0;
-  
-  function changeBackground(buttonId, imgId) {
-    const body = document.getElementById("main-body");
-  
+  { bg: "#1E40AF", text: "#FFFFFF" }, // Dark Navy Blue
+  { bg: "#93C5FD", text: "#000000" }, // Light Navy Blue
+  { bg: "#FEF3C7", text: "#000000" }, // Even Lighter Retro Yellow
+  { bg: "#FECACA", text: "#000000" }, // Even Lighter Retro Red
+  { bg: "#DDD6FE", text: "#000000" }, // Even Lighter Retro Purple
+  { bg: "#F4F7FF", text: "#374151" }, // Default (unchanged)
+];
 
-    do {
-      index = Math.floor(Math.random() * colors.length);
-    } while (index === lastIndex);
-  
-    lastIndex = index; // Store the last used index
-  
+// const colors = [
+//   { bg: "#FEF3C7", text: "#000000" }, // Even Lighter Retro Yellow
+//   { bg: "#FECACA", text: "#000000" }, // Even Lighter Retro Red
+//   { bg: "#DDD6FE", text: "#000000" }, // Even Lighter Retro Purple
+//   { bg: "#F4F7FF", text: "#374151" }, // Default (unchanged)
+// ];
 
-    body.style.backgroundColor = colors[index].bg;
-    body.style.color = colors[index].text;
-  
- 
-    rotation += 60;
-    document.getElementById(imgId).style.transform = `rotate(${rotation}deg)`;
-  }
-  
+
+let index = 0; // Start from the first color
+let rotation = 0;
+
+function changeBackground(imgId) {
+  const body = document.getElementById("main-body");
+
+  // Set new background and text color
+  body.style.backgroundColor = colors[index].bg;
+  body.style.color = colors[index].text;
+
+  // Rotate the image
+  rotation += 60;
+  document.getElementById(imgId).style.transform = `rotate(${rotation}deg)`;
+
+  // Move to the next color in sequence
+  index = (index + 1) % colors.length; // Loop back to the first when reaching the end
+}
+
 
   document.getElementById("bg-change-btn").addEventListener("click", function () {
-    changeBackground("bg-change-btn", "rotateImg");
+    changeBackground("rotateImg");
   });
   
   document.getElementById("bg-change-btn-mobile").addEventListener("click", function () {
-    changeBackground("bg-change-btn-mobile", "rotateImg-mobile");
+    changeBackground("rotateImg-mobile");
   });
   
