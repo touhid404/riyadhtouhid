@@ -13,15 +13,22 @@
       rel="stylesheet"
     />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+    <!-- Daisy UI LINK -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+
+    <!-- Font awesome link -->
     <script
       src="https://kit.fontawesome.com/873c85c170.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Tailwind Link -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="Css/style.css" />
     <script>
@@ -34,102 +41,138 @@
             maxWidth: {
               300: "200px",
             },
+            fontFamily: {
+              quicksand: ["Quicksand", "serif"],
+            },
+            maxWidth: {
+              psize: "600px",
+            },
           },
         },
       };
     </script>
   </head>
 
-  <header
-    class="fixed top-0 left-0 w-full z-[50] bg-transparent backdrop-blur-lg"
-  >
-    <nav>
-      <div class="navbar bg-base-100">
-        <div class="flex-1">
-          <a class="btn btn-ghost text-xl">
-            <span class="hidden lg:block">Riyadh</span> Touhid</a
-          >
-        </div>
-        <div class="flex-none">
-          <div class="dropdown dropdown-end lg:hidden md:hidden">
-            <div
-              tabindex="0"
-              role="button"
-              class="btn btn-ghost btn-circle avatar"
-            >
-              <div class="w-10 rounded-full">
-                <img alt="Riyadh's Image" src="img/riyadh.jpg" />
-              </div>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              <li><a href="#projects">Projects</a></li>
-              <li>
-                <a
-                  href="assets/riyadh-touhid-resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Resume</a
-                >
-              </li>
-              <li><a>Blogs</a></li>
-              <!-- <li><button id="darkModeToggle">Dark Mode</button></li> -->
-              <li>
-                <button id="darkModeToggle" class="transition-all duration-300">
-                  <i id="darkModeIcon" class="fas fa-moon text-md"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div class="hidden md:flex mr-5 text-sm">
-            <ul class="flex gap-8 item-center">
-              <li class="flex items-center">
-                <a href="#projects">Projects</a>
-              </li>
-              <li class="flex items-center">
-                <a
-                  href="assets/riyadh-touhid-resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Resume</a
-                >
-              </li>
-
-              <li class="flex items-center"><a>Blogs</a></li>
-              <!-- <li><button id="darkModeToggle">Dark Mode</button></li> -->
-              <li class="flex items-center">
-                <button id="darkModeToggle" class="transition-all duration-300">
-                  <i id="darkModeIcon" class="fas fa-moon text-md"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
   <body
-    class="h-screen bg-gray-50 bg-grid-light transition-colors duration-300"
-    id="body"
+    class="h-screen bg-[#F4F7FF] bg-grid-light transition-colors duration-300 font-quicksand"
+    id="main-body"
   >
+    <!-- Header section -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg font-quicksand bg-base-100 shadow-md"
+    >
+      <nav
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <div class="text-xl font-semibold">
+          <a class="btn btn-ghost">
+            <span class="hidden lg:inline">Riyadh</span> Touhid
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 text-sm font-medium items-center">
+          <li>
+            <a href="#projects" class="hover:text-primary transition"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="assets/riyadh-touhid-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-primary transition"
+            >
+              Resume
+            </a>
+          </li>
+          <li><a href="#" class="hover:text-primary transition">Blogs</a></li>
+          <li>
+            <button
+              id="bg-change-btn"
+              class="w-10 h-10 bg-transparent p-2 rounded-full  flex justify-center items-center"
+            >
+              <img
+                id="rotateImg"
+                src="./img/theme.svg"
+                class="transition-transform duration-300"
+                alt="Theme Toggle"
+              />
+            </button>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu -->
+        <div class="relative md:hidden">
+          <button id="menu-toggle" class="btn btn-ghost btn-circle avatar">
+            <div class="w-10 rounded-full">
+              <img
+                class="rounded-full"
+                alt="Riyadh's Image"
+                src="./img/riyadh.jpg"
+              />
+            </div>
+          </button>
+          <ul
+            id="mobile-menu"
+            class="menu menu-sm absolute right-0 mt-3 w-52 bg-gradient-to-br from-[#a18cd1] to-[#fbc2eb] rounded-lg shadow-lg p-2 hidden z-50"
+          >
+            <li><a href="#projects" class="font-medium">Projects</a></li>
+            <li>
+              <a
+                href="assets/riyadh-touhid-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-medium"
+                >Resume</a
+              >
+            </li>
+            <li><a href="#" class="font-medium">Blogs</a></li>
+            <li>
+              <button
+              id="bg-change-btn-mobile"
+              class="w-10 h-10 bg-transparent p-2 rounded-full shadow-sm flex justify-center items-center"
+            >
+              <img
+                id="rotateImg-mobile"
+                src="./img/theme.svg"
+                class="transition-transform duration-300"
+                alt="Theme Toggle"
+              />
+            </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+    <!-- Main body part -->
     <main class="pt-20">
+      <!-- Personal info section -->
       <section class="container mx-auto px-4 py-2 lg:py-4">
-        <div class="w-[200px] mx-auto hidden md:block lg:block">
-          <div class="image-container">
+        <div class="w-[200px] hidden md:block lg:block mx-auto">
+          <div class="image-container mx-auto">
             <img
               src="img/riyadh.jpg"
               alt="Riyadh's Image"
               class="w-40 h-40 rounded-full mx-auto mb-4 transition-all duration-500 ease-in-out transform hover:blur-md hover:scale-105 hover:border-4 hover:border-gray-400"
             />
-            <!-- <div class="message hidden">Thank you!</div> -->
           </div>
         </div>
 
         <h2 class="text-2xl font-bold text-center mb-4">Hi, Everyone</h2>
-        <p class="msizep mx-3 lg:mx-auto text-justify my-5 text-sm">
+
+        <p
+          class="max-w-[760px] mx-3 lg:mx-auto text-justify my-5 text-sm lg:text-[14px] font-medium"
+        >
           Hello! I’m Touhidul Islam Riyadh, a Computer Science student at United
           International University. I love turning ideas into interactive
           websites that are both easy to use and visually appealing. Whether
@@ -235,8 +278,6 @@
           />
           <img src="pl/icons8-react-js.svg" alt="React-js" class="w-12 h-12" />
           <img src="pl/nextjs.svg" alt="Next-js" class="w-12 h-12 text-white" />
-          
-          
 
           <img src="pl/icons8-figma.svg" alt="Figma" class="w-12 h-12" />
           <img src="pl/expo.svg" alt="Figma" class="w-12 h-12" />
@@ -264,14 +305,11 @@
       </section>
 
       <!-- Sections My blogs  -->
-       <section class="container mx-auto ">
-        <h2 class="lg:text-2xl font-bold text-center mb-4">
-          Blogs Coming
-        </h2>
-
-       </section>
+      <section class="container mx-auto">
+        <h2 class="lg:text-2xl font-bold text-center mb-4">Blogs Coming</h2>
+      </section>
     </main>
 
-    <script src="js/script.js" defer></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
