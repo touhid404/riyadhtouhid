@@ -32,7 +32,7 @@ function displayProjects(limit) {
             <button class="view-more-btn mt-3  px-3 hover:underline font-medium" data-index="${index}">View Details</button>
             <div class="details hidden mt-4 border-t border-gray-300 pt-3">
                 <p class="text-justify">${project.description}</p>
-                <div class="flex gap-4 mt-2">
+                <div class="flex gap-2 md:gap-4 lg:gap-6 mt-2">
                     <a href="${
                       project.github
                     }" target="_blank" class="text-blue-500 hover:underline font-bold">GitHub Repository</a>
