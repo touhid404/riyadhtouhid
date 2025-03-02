@@ -19,7 +19,7 @@ function displayProjects(limit) {
         projectCard.className = `
             backdrop-blur-lg bg-trasnparent min-w-[350px] lg:min-w-[760px] max-w-[900px] mx-auto
             shadow-lg rounded-lg p-6 transition-all duration-300 transform 
-            hover:scale-105 
+            
         `;
 
         projectCard.innerHTML = `
@@ -27,7 +27,7 @@ function displayProjects(limit) {
             <span class="text-sm font-bold">${formatDate(project.date)}</span>
             <button class="view-more-btn mt-3 text-blue-600 px-3 hover:underline font-medium" data-index="${index}">View More</button>
             <div class="details hidden mt-4 border-t border-gray-300 pt-3">
-                <p class="">${project.description}</p>
+                <p class="text-justify">${project.description}</p>
                 <div class="flex gap-4 mt-2">
                     <a href="${project.github}" target="_blank" class="text-blue-500 dark:text-blue-400 hover:underline font-bold">GitHub Repository</a>
                     ${project.youtube ? `<a href="${project.youtube}" target="_blank" class="text-red-500 dark:text-red-400 hover:underline font-bold">YouTube Video</a>` : ""}
