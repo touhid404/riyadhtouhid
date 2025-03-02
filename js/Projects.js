@@ -4,7 +4,7 @@ const projectContainer = document.getElementById("project-container");
 const loadMoreBtn = document.getElementById("load-more-btn");
 const initialDisplayCount = 4;
 let displayedCount = initialDisplayCount;
-let isAllProjectsVisible = false; // Flag to track whether all projects are visible
+let isAllProjectsVisible = false;
 
 function formatDate(dateString) {
     const options = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -16,16 +16,22 @@ function displayProjects(limit) {
     projectContainer.innerHTML = ""; // Clear previous content
     projects.slice(0, limit).forEach((project, index) => {
         const projectCard = document.createElement("div");
-        projectCard.className = "project-card";
+        projectCard.className = `
+            backdrop-blur-lg bg-trasnparent min-w-[350px] lg:min-w-[760px] max-w-[900px] mx-auto
+            shadow-lg rounded-lg p-6 transition-all duration-300 transform 
+            hover:scale-105 
+        `;
 
         projectCard.innerHTML = `
-            <h3 class="project-title">${project.title}</h3>
-            <span class="project-date">${formatDate(project.date)}</span>
-            <button class="view-more-btn" data-index="${index}">View More</button>
-            <div class="details hidden">
-                <p>${project.description}</p>
-                <a href="${project.github}" target="_blank">Github repository link</a>
-                <img src="${project.image}" alt="${project.title}">
+            <h3 class="text-xl font-bold ">${project.title}</h3>
+            <span class="text-sm font-bold">${formatDate(project.date)}</span>
+            <button class="view-more-btn mt-3 text-blue-600 px-3 hover:underline font-medium" data-index="${index}">View More</button>
+            <div class="details hidden mt-4 border-t border-gray-300 pt-3">
+                <p class="">${project.description}</p>
+                <div class="flex gap-4 mt-2">
+                    <a href="${project.github}" target="_blank" class="text-blue-500 dark:text-blue-400 hover:underline font-bold">GitHub Repository</a>
+                    ${project.youtube ? `<a href="${project.youtube}" target="_blank" class="text-red-500 dark:text-red-400 hover:underline font-bold">YouTube Video</a>` : ""}
+                </div>
             </div>
         `;
         
@@ -41,7 +47,7 @@ function displayProjects(limit) {
     });
 }
 
-// Function to toggle the "Find More Projects" button
+// Toggle "Find More Projects" button
 function toggleLoadMoreButton() {
     if (isAllProjectsVisible) {
         loadMoreBtn.textContent = "Find More Projects";

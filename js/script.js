@@ -1,9 +1,7 @@
 const colors = [
-  { bg: "#1E40AF", text: "#FFFFFF" }, // Dark Navy Blue
-  { bg: "#93C5FD", text: "#000000" }, // Light Navy Blue
-  { bg: "#FEF3C7", text: "#000000" }, // Even Lighter Retro Yellow
-  { bg: "#FECACA", text: "#000000" }, // Even Lighter Retro Red
-  { bg: "#DDD6FE", text: "#000000" }, // Even Lighter Retro Purple
+  { bg: "#2B303B", text: "#F4F7FF" }, // Dark Dim
+  { bg: "#EAE3CD", text: "#7A5500" }, // Retro
+  { bg: "#FBF2F7", text: "#E75480" }, // Valentine
   { bg: "#F4F7FF", text: "#374151" }, // Default (unchanged)
 ];
 
