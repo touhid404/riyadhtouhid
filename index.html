@@ -54,7 +54,7 @@
   </head>
 
   <body
-    class="h-screen bg-[#F4F7FF] text-gray-700 font-quicksand"
+    class="h-screen bg-[#F4F7FF] text-gray-700 font-quicksand scroll-smooth"
     id="main-body"
   >
     <!-- Header section -->
@@ -169,7 +169,67 @@
           </div>
         </div>
 
-        <h2 class="text-2xl font-bold text-center mb-4">Hi, Everyone</h2>
+        <!-- <h2 class="text-2xl font-bold text-center mb-4">Hi, Everyone</h2> -->
+        <h2 class="text-lg lg:text-2xl font-bold text-center mb-4">
+          <span id="typing"></span><span class="cursor"></span>
+      </h2>
+  
+      <script>
+          const messages = [
+              "👋 Hi, Everyone!",
+              " Welcome to my page!",
+              "I am from Dhaka, Bangladesh!",
+              "Hope you're having a great day!",
+              "I'm  passionate about technology and design.",
+              "I'm currently working on frontend development",
+              "I'm always eager to learn new technologies ",
+              "If you're interested in knowing more about me feel free to reach out!",
+          ];
+          
+          let messageIndex = 0;
+          let charIndex = 0;
+          let repeatCount = 0;
+          const maxRepeats = 1; // Repeat all messages twice before stopping
+          let typingSpeed = 150;
+          let erasingSpeed = 80;
+          let delayBetweenMessages = 1500;
+          let typingElement = document.getElementById("typing");
+  
+          function typeMessage() {
+              if (charIndex < messages[messageIndex].length) {
+                  typingElement.innerHTML += messages[messageIndex].charAt(charIndex);
+                  charIndex++;
+                  setTimeout(typeMessage, typingSpeed);
+              } else {
+                  setTimeout(eraseMessage, delayBetweenMessages);
+              }
+          }
+  
+          function eraseMessage() {
+              if (charIndex > 0) {
+                  typingElement.innerHTML = messages[messageIndex].substring(0, charIndex - 1);
+                  charIndex--;
+                  setTimeout(eraseMessage, erasingSpeed);
+              } else {
+                  messageIndex++;
+  
+                  if (messageIndex >= messages.length) {
+                      repeatCount++;
+                      if (repeatCount >= maxRepeats) {
+                          // Stop after repeating twice and show "Hi, Everyone!"
+                          typingElement.innerHTML = "👋 Hi, Everyone!";
+                          document.querySelector(".cursor").style.display = "none"; // Hide the cursor
+                          return;
+                      }
+                      messageIndex = 0; // Reset message index for next round
+                  }
+                  
+                  setTimeout(typeMessage, typingSpeed);
+              }
+          }
+  
+          typeMessage();
+      </script>
 
         <p
           class="max-w-[760px] mx-3 lg:mx-auto text-justify my-5 text-sm lg:text-[16px] font-medium"
