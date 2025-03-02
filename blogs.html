@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs - Riyadh Touhid</title>
+    <link rel="icon" type="image/jpg" href="img/riyadh.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/873c85c170.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Css/style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              quicksand: ["Quicksand", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    id="main-body"
+    class="h-screen bg-[#F4F7FF] text-gray-700 font-quicksand"
+  >
+    <header
+      class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg font-quicksand bg-base-100 shadow-md"
+    >
+      <nav
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <div class="text-xl font-semibold">
+          <a class="btn btn-ghost">
+            <span class="hidden lg:inline">Riyadh</span> Touhid
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 text-sm font-medium items-center">
+          <li>
+            <a href="index.html" class="hover:text-primary transition"
+            >About</a
+          >
+          <li>
+            <a href="#projects" class="hover:text-primary transition"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="resume.html" class="hover:text-primary transition"
+              >Resume</a
+            >
+          </li>
+          <li><a href="#" class="hover:text-primary transition">Blogs</a></li>
+          <li>
+            <button
+              id="bg-change-btn"
+              class="w-10 h-10 bg-transparent p-2 rounded-full flex justify-center items-center"
+            >
+              <img
+                id="rotateImg"
+                src="./img/theme.svg"
+                class="transition-transform duration-300"
+                alt="Theme Toggle"
+              />
+            </button>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu -->
+        <div class="relative md:hidden">
+          <button id="menu-toggle" class="btn btn-ghost btn-circle avatar">
+            <div class="w-10 rounded-full">
+              <img
+                class="rounded-full"
+                alt="Riyadh's Image"
+                src="./img/riyadh.jpg"
+              />
+            </div>
+          </button>
+          <ul
+            id="mobile-menu"
+            class="menu menu-sm absolute right-0 mt-3 w-[100px] bg-gradient-to-br from-[#a18cd1] to-[#fbc2eb] rounded-lg shadow-lg p-2 hidden z-50"
+          >
+          <li>
+            <a href="index.html" class="hover:text-primary transition"
+            >About</a
+          >
+            <li><a href="#projects" class="font-medium">Projects</a></li>
+            <li>
+              <a href="resume.html" class="hover:text-primary transition"
+              >Resume</a
+            >
+            
+          </li>
+          <li>
+            <a href="blogs.html" class="hover:text-primary transition"
+            >Blogs</a
+          >
+            <li>
+              <button
+                id="bg-change-btn-mobile"
+                class="w-10 h-10 bg-transparent p-2 rounded-full shadow-sm flex justify-center items-center"
+              >
+                <img
+                  id="rotateImg-mobile"
+                  src="./img/theme.svg"
+                  class="transition-transform duration-300"
+                  alt="Theme Toggle"
+                />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+    <main class="pt-20 container mx-auto px-4 py-8">
+      <h2 class="text-2xl font-bold text-center mb-6">Latest Blogs</h2>
+      <div class="max-w-3xl mx-auto p-6 shadow-lg rounded-lg">
+        <article class="mb-6">
+          <h3 class="text-xl font-semibold">
+            Understanding JavaScript Closures
+          </h3>
+          <p class="text-sm text-gray-500">Published on March 2, 2025</p>
+          <p class="mt-2">
+            Closures are an important concept in JavaScript that allows inner
+            functions to access variables from an outer function even after the
+            outer function has executed...
+          </p>
+          <a href="#" class="text-blue-600">Read more</a>
+        </article>
+        <article class="mb-6">
+          <h3 class="text-xl font-semibold">Getting Started with Next.js</h3>
+          <p class="text-sm text-gray-500">Published on February 25, 2025</p>
+          <p class="mt-2">
+            Next.js is a React framework that enables functionalities such as
+            server-side rendering and static site generation...
+          </p>
+          <a href="#" class="text-blue-600">Read more</a>
+        </article>
+        <article>
+          <h3 class="text-xl font-semibold">
+            How to Design a Scalable Database
+          </h3>
+          <p class="text-sm text-gray-500">Published on February 18, 2025</p>
+          <p class="mt-2">
+            Database design is crucial for the scalability and efficiency of an
+            application. Learn about normalization, indexing, and best
+            practices...
+          </p>
+          <a href="#" class="text-blue-600">Read more</a>
+        </article>
+        <article>
+          <h3 class="text-xl font-semibold">
+            How to Design a Scalable Database
+          </h3>
+          <p class="text-sm text-gray-500">Published on February 18, 2025</p>
+          <p class="mt-2">
+            Database design is crucial for the scalability and efficiency of an
+            application. Learn about normalization, indexing, and best
+            practices...
+          </p>
+          <a href="#" class="text-blue-600">Read more</a>
+        </article>
+        <article>
+          <h3 class="text-xl font-semibold">
+            How to Design a Scalable Database
+          </h3>
+          <p class="text-sm text-gray-500">Published on February 18, 2025</p>
+          <p class="mt-2">
+            Database design is crucial for the scalability and efficiency of an
+            application. Learn about normalization, indexing, and best
+            practices...
+          </p>
+          <a href="#" class="text-blue-600">Read more</a>
+        </article>
+        <article>
+          <h3 class="text-xl font-semibold">
+            How to Design a Scalable Database
+          </h3>
+          <p class="text-sm text-gray-500">Published on February 18, 2025</p>
+          <p class="mt-2">
+            Database design is crucial for the scalability and efficiency of an
+            application. Learn about normalization, indexing, and best
+            practices...
+          </p>
+          <a href="#" class="text-blue-600">Read more</a>
+        </article>
+
+      </div>
+    </main>
+    <footer class="bg-gray-800 text-white py-3 mt-5 lg:mt-10">
+      <div class="container mx-auto px-4 text-center">
+        <div class="flex flex-wrap justify-center gap-4 mb-4">
+          <a href="https://github.com/touhid404" class="hover:text-gray-400">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/riyadh-touhid"
+            class="hover:text-gray-400"
+          >
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/@riyadhtouhid"
+            class="hover:text-gray-400"
+          >
+            <i class="fab fa-youtube text-2xl"></i>
+          </a>
+          <a
+            href="https://discord.com/users/938492174071369749"
+            class="hover:text-gray-400"
+          >
+            <i class="fab fa-discord text-2xl"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/riyadhwhy"
+            class="hover:text-gray-400"
+          >
+            <i class="fab fa-facebook text-2xl"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/riyadh_touhid"
+            class="hover:text-gray-400"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+        </div>
+
+        <p class="text-sm mb-3">
+          Designed & Developed by
+          <span class="font-semibold">Touhidul Islam Riyadh</span>
+        </p>
+
+        <p class="text-xs">
+          © <span id="footerYear">2025</span> All rights reserved.
+        </p>
+      </div>
+      <script>
+        const currentYear = new Date();
+        document.getElementById("footerYear").textContent =
+          currentYear.getFullYear();
+      </script>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
