@@ -91,7 +91,7 @@
           <li>
             <button
               id="bg-change-btn"
-              class="w-10 h-10 bg-transparent p-2 rounded-full  flex justify-center items-center"
+              class="w-10 h-10 bg-transparent p-2 rounded-full flex justify-center items-center"
             >
               <img
                 id="rotateImg"
@@ -116,8 +116,7 @@
           </button>
           <ul
             id="mobile-menu"
-            class="menu menu-sm absolute right-0 mt-3 w-[100px] bg-gradient-to-br
-             from-[#a18cd1] to-[#fbc2eb] rounded-lg shadow-lg p-2 hidden z-50 "
+            class="menu menu-sm absolute right-0 mt-3 w-[100px] bg-gradient-to-br from-[#a18cd1] to-[#fbc2eb] rounded-lg shadow-lg p-2 hidden z-50"
           >
             <li><a href="#projects" class="font-medium">Projects</a></li>
             <li>
@@ -132,16 +131,16 @@
             <li><a href="#" class="font-medium">Blogs</a></li>
             <li>
               <button
-              id="bg-change-btn-mobile"
-              class="w-10 h-10 bg-transparent p-2 rounded-full shadow-sm flex justify-center items-center"
-            >
-              <img
-                id="rotateImg-mobile"
-                src="./img/theme.svg"
-                class="transition-transform duration-300"
-                alt="Theme Toggle"
-              />
-            </button>
+                id="bg-change-btn-mobile"
+                class="w-10 h-10 bg-transparent p-2 rounded-full shadow-sm flex justify-center items-center"
+              >
+                <img
+                  id="rotateImg-mobile"
+                  src="./img/theme.svg"
+                  class="transition-transform duration-300"
+                  alt="Theme Toggle"
+                />
+              </button>
             </li>
           </ul>
         </div>
@@ -172,20 +171,20 @@
         <!-- <h2 class="text-2xl font-bold text-center mb-4">Hi, Everyone</h2> -->
         <h2 class="text-lg lg:text-2xl font-bold text-center mb-4">
           <span id="typing"></span><span class="cursor"></span>
-      </h2>
-  
-      <script>
+        </h2>
+
+        <script>
           const messages = [
-              "👋 Hi, Everyone!",
-              " Welcome to my page!",
-              "I am from Dhaka, Bangladesh!",
-              "Hope you're having a great day!",
-              "I'm  passionate about technology and design.",
-              "I'm currently working on frontend development",
-              "I'm always eager to learn new technologies ",
-              "If you're interested in knowing more about me feel free to reach out!",
+            "👋 Hi, Everyone!",
+            " Welcome to my page!",
+            "I am from Dhaka, Bangladesh!",
+            "Hope you're having a great day!",
+            "I'm  passionate about technology and design.",
+            "I'm currently working on frontend development",
+            "I'm always eager to learn new technologies ",
+            "If you're interested in knowing more about me feel free to reach out!",
           ];
-          
+
           let messageIndex = 0;
           let charIndex = 0;
           let repeatCount = 0;
@@ -194,42 +193,46 @@
           let erasingSpeed = 80;
           let delayBetweenMessages = 1500;
           let typingElement = document.getElementById("typing");
-  
+
           function typeMessage() {
-              if (charIndex < messages[messageIndex].length) {
-                  typingElement.innerHTML += messages[messageIndex].charAt(charIndex);
-                  charIndex++;
-                  setTimeout(typeMessage, typingSpeed);
-              } else {
-                  setTimeout(eraseMessage, delayBetweenMessages);
-              }
+            if (charIndex < messages[messageIndex].length) {
+              typingElement.innerHTML +=
+                messages[messageIndex].charAt(charIndex);
+              charIndex++;
+              setTimeout(typeMessage, typingSpeed);
+            } else {
+              setTimeout(eraseMessage, delayBetweenMessages);
+            }
           }
-  
+
           function eraseMessage() {
-              if (charIndex > 0) {
-                  typingElement.innerHTML = messages[messageIndex].substring(0, charIndex - 1);
-                  charIndex--;
-                  setTimeout(eraseMessage, erasingSpeed);
-              } else {
-                  messageIndex++;
-  
-                  if (messageIndex >= messages.length) {
-                      repeatCount++;
-                      if (repeatCount >= maxRepeats) {
-                          // Stop after repeating twice and show "Hi, Everyone!"
-                          typingElement.innerHTML = "👋 Hi, Everyone!";
-                          document.querySelector(".cursor").style.display = "none"; // Hide the cursor
-                          return;
-                      }
-                      messageIndex = 0; // Reset message index for next round
-                  }
-                  
-                  setTimeout(typeMessage, typingSpeed);
+            if (charIndex > 0) {
+              typingElement.innerHTML = messages[messageIndex].substring(
+                0,
+                charIndex - 1
+              );
+              charIndex--;
+              setTimeout(eraseMessage, erasingSpeed);
+            } else {
+              messageIndex++;
+
+              if (messageIndex >= messages.length) {
+                repeatCount++;
+                if (repeatCount >= maxRepeats) {
+                  // Stop after repeating twice and show "Hi, Everyone!"
+                  typingElement.innerHTML = "👋 Hi, Everyone!";
+                  document.querySelector(".cursor").style.display = "none"; // Hide the cursor
+                  return;
+                }
+                messageIndex = 0; // Reset message index for next round
               }
+
+              setTimeout(typeMessage, typingSpeed);
+            }
           }
-  
+
           typeMessage();
-      </script>
+        </script>
 
         <p
           class="max-w-[760px] mx-3 lg:mx-auto text-justify my-5 text-sm lg:text-[16px] font-medium"
@@ -354,12 +357,12 @@
         </h2>
         <div
           id="project-container"
-          class="container mx-auto grid grid-col-1  gap-6 px-3 lg:px-10 justify-center"
+          class="container mx-auto grid grid-col-1 gap-6 px-3 lg:px-10 justify-center"
         ></div>
         <button
           id="load-more-btn"
           style="display: none"
-          class="px-4 py-2 mt-4 underline font-bold text-sm rounded-lg mx-auto  focus:outline-none transition duration-300"
+          class="px-4 py-2 mt-4 underline font-bold text-sm rounded-lg mx-auto focus:outline-none transition duration-300"
         >
           Find More Projects ?
         </button>
@@ -367,12 +370,64 @@
 
       <!-- Sections My blogs  -->
       <section class="container mx-auto">
-        <h2 class="lg:text-2xl font-bold text-center mb-4">Blogs Coming</h2>
+        <!-- <h2 class="lg:text-2xl font-bold text-center mb-4">Blogs Coming</h2> -->
       </section>
     </main>
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-3 mt-5 lg:mt-10">
+      <div class="container mx-auto px-4 text-center">
+        <div class="flex flex-wrap justify-center gap-4 mb-4">
+          <a href="https://github.com/touhid404" class="hover:text-gray-400">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/riyadh-touhid"
+            class="hover:text-gray-400"
+          >
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/@riyadhtouhid"
+            class="hover:text-gray-400"
+          >
+            <i class="fab fa-youtube text-2xl"></i>
+          </a>
+          <a
+            href="https://discord.com/users/938492174071369749"
+            class="hover:text-gray-400"
+          >
+            <i class="fab fa-discord text-2xl"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/riyadhwhy"
+            class="hover:text-gray-400"
+          >
+            <i class="fab fa-facebook text-2xl"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/riyadh_touhid"
+            class="hover:text-gray-400"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+        </div>
+
+        <p class="text-sm mb-3">
+          Designed & Developed by
+          <span class="font-semibold">Touhidul Islam Riyadh</span>
+        </p>
+
+        <p class="text-xs text-gray-400">
+          © <span id="footerYear">2025</span> All rights reserved.
+        </p>
+      </div>
+      <script>
+        const currentYear = new Date();
+        document.getElementById('footerYear').textContent = currentYear.getFullYear();
+
+      </script>
+    </footer>
 
     <script src="./js/script.js"></script>
   </body>
 </html>
-
-
